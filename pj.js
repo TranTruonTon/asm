@@ -41,6 +41,11 @@ const server = http.createServer((req, res) => {
             var data = fs.readFileSync("./view/order.html")
             res.end(data.toString());
             break;
+        case "/product":
+            res.writeHead(200);
+            var data = fs.readFileSync("./view/product.html")
+            res.end(data.toString());
+            break;
         default:
             break;
 
